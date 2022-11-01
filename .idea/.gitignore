@@ -147,7 +147,7 @@ hs_err_pid*
 replay_pid*
 
 ### Maven ###
-pom.xml
+/pom.xml
 target/
 pom.xml.tag
 pom.xml.releaseBackup
