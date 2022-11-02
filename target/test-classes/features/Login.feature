@@ -1,37 +1,40 @@
-Feature: Symund Login
+Feature: US-001 Login Functionality [AutomationS3-YAT]
 
   Background: User is on the login page
     Given user is on the login page
 
 
+    @SYMU-1682
   Scenario: User can login with valid credentials
   When user enters valid credentials
   Then user should land on dashboard
 
-
+  @SYMU-1683
   Scenario: User cannot login with any invalid credentials
     When user enters invalid "invalid" credentials
     Then error message "Kullanıcı adı ya da parola hatalı." should be displayed
 
+  @SYMU-1684
     Scenario: User cannot login with any empty credentials
       When user enters "" credentials
       Then error message with validation message "Please fill out this field" should be displayed
 
-
+  @SYMU-1685
   Scenario: User can see the password in form of dots by default
     When user enters the password
     Then user should see the password in form of dots by default
-
+  @SYMU-1686
   Scenario: User can see the password explicitly if needed
     When user enters the password
     And user clicks on the eye icon
     Then user should see the password explicitly
 
-
+  @SYMU-1687
   Scenario: User can see the "Forgot password?" link on the login page and can see the "Reset password" button on the next page after clicking on forget password link
     When user clicks to forgot password link
     Then user should see reset password button
 
+  @SYMU-1688
   Scenario: User can see valid placeholders on Username and Password fields
   Then user can see valid placeholders on Username and Password fields
 
