@@ -12,19 +12,25 @@ public class LoginPage {
     }
 
     @FindBy(xpath = "//input[@id='user']")
-        WebElement username;
+      public WebElement username;
 
     @FindBy(xpath = "//input[@id='password']")
-        WebElement password;
+    public  WebElement password;
 
     @FindBy(xpath = "//input[@id='submit-form']")
-    WebElement loginButton;
+    public WebElement loginButton;
 
     @FindBy(xpath = "//*[@id=\"lost-password\"]")
-    WebElement forgotPassword;
+    public WebElement forgotPassword;
 
     @FindBy(xpath = "//*[@id=\"body-login\"]/div[1]/div/main/div/div/form/fieldset/p[2]/a")
-    WebElement showPassword;
+    public WebElement showPassword;
+
+    @FindBy(xpath = "//p[@class='warning wrongPasswordMsg']")
+    public WebElement wrongUserNamePassowrdWarning;
+
+    @FindBy(xpath = "//*[@id=\"reset-password-submit\"]")
+    public WebElement resetPassword;
 
 
 
